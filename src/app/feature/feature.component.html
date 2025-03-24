@@ -1,0 +1,25 @@
+<section id="features" class="py-15 mt-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+  
+      <!-- Marquee Container -->
+      <div class="relative mt-8 overflow-hidden">
+        <!-- Marquee Row -->
+        <div class="flex marquee-animation">
+          <div *ngFor="let feature of features" class="flex-none px-4 w-1/4">
+            <div class="flex flex-col items-center text-center bg-white p-6 rounded-lg">
+              <fa-icon [icon]="feature.icon" size="3x" class="text-green-950"></fa-icon>
+              <h3 class="text-xl font-semibold text-gray-800 mt-3">{{ feature.title }}</h3>
+            </div>
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div *ngFor="let feature of features" class="flex-none px-4 w-1/4">
+            <div class="flex flex-col items-center text-center bg-white p-6 rounded-lg">
+              <fa-icon [icon]="feature.icon" size="3x" class="text-green-950"></fa-icon>
+              <h3 class="text-xl font-semibold text-gray-800 mt-3">{{ feature.title }}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

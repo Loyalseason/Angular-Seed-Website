@@ -1,0 +1,39 @@
+<nav class="bg-green-950 text-white p-4 lg:w-3/4 lg-screen mx-auto  top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a class="text-xl font-bold" routerLink="/">MyApp</a>
+  
+      <!-- Mobile Menu Button -->
+      <button class="lg:hidden text-white focus:outline-none" (click)="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+  
+      <ul class="hidden lg:flex space-x-6">
+        <li><a class="hover:text-gray-400" routerLink="/">Home</a></li>
+        <li><a class="hover:text-gray-400" routerLink="/about">About</a></li>
+        <li><a class="hover:text-gray-400" routerLink="/about">Service</a></li>
+        <li><a class="hover:text-gray-400" routerLink="/about">Projects</a></li>
+        <li><a class="hover:text-gray-400" routerLink="/about">Testimonials</a></li>
+      </ul>
+  
+      <ul class="hidden lg:flex">
+        <li>
+          <a class="bg-white text-lime-900 px-4 py-2 rounded-full border border-gray-400 hover:bg-gray-200 transition"
+            routerLink="/contact">
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Mobile Menu (Toggles on click) -->
+    <div [ngClass]="{'hidden': !isMenuOpen}" class="lg:hidden mt-2 bg-gray-800 p-4 rounded-lg text-center">
+      <a class="block py-2 hover:text-gray-400" routerLink="/">Home</a>
+      <a class="block py-2 hover:text-gray-400" routerLink="/about">About</a>
+      <a class="block py-2 bg-white text-gray-900 rounded-full border border-gray-400 hover:bg-gray-200 transition"
+        routerLink="/contact">
+        Contact
+      </a>
+    </div>
+</nav>
